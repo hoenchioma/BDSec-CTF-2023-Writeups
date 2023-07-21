@@ -30,7 +30,7 @@ void callme(void)
 }
 ```
 
-Now, we want to call the function `callme`. But how do we do that? Well, if we look at the stack frame of `main`, we can see that `code_addr` is located right after `buff`. This means that if we overflow `buff`, we can overwrite `code_addr` with the address of `callme`. Now if the value of `code_addr` is not `0x0`, then `callme` will be called and we will get the flag. From ghidra we can find the address of the `callme` function to be `0x0804875e`. So to do the exploit, we can use the following python script:
+Now, we want to call the function `callme`. But how do we do that? Well, if we look at the stack frame of `main`, we can see that `code_addr` is located right after `buff`. This means that if we overflow `buff`, we can overwrite `code_addr` with the address of `callme`. Now if the value of `code_addr` is not `0x0`, then `callme` will be called and we will get the flag. From ghidra we can find the address of the `callme` function to be `0x0804875e`. So to do the exploit, we can use the following python script (using the `pwntools` python library):
 ```python
 from pwn import *
 

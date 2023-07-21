@@ -43,7 +43,7 @@ As we can see, all we have to do is somehow get `secret` to equal `0xdeadbeef` a
 
 ![stack frame](vuln-stack-frame.png)
 
-Now if we look at `vuln`, we can see that it calls `gets` on `buff` without any bounds checking. This means that we can overflow `buff` and overwrite `secret` with `0xdeadbeef`. To do this, we can use the following python script:
+Now if we look at `vuln`, we can see that it calls `gets` on `buff` without any bounds checking. This means that we can overflow `buff` and overwrite `secret` with `0xdeadbeef`. To do this, we can use the following python script (using the `pwntools` python library):
 ```python
 from pwn import *
 
