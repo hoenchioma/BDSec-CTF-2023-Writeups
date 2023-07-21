@@ -1,3 +1,5 @@
+![problem statement](problem-statement.png)
+
 Opened the binary file in ghidra to find the following functions (some types and variables are renamed for better understanding):
 ```c
 

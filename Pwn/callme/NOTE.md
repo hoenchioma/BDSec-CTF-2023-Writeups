@@ -1,3 +1,5 @@
+![problem statement](problem-statement.png)
+
 Opening the binary file in ghidra to find the following functions (some parts are removed for simplicity, some types and variables are renamed for better understanding):
 ```c
 void main(void)
